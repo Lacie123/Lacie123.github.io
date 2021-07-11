@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: 随笔 | Hexo</title>
+  <title>python1 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/tags/%E9%9A%8F%E7%AC%94/index.html">
+  <meta name="description" content="python day1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python1">
+<meta property="og:url" content="http://example.com/2021/07/11/python1/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="python day1">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-07-11T06:18:03.000Z">
+<meta property="article:modified_time" content="2021-07-11T07:50:51.484Z">
 <meta property="article:author" content="lacie123">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -164,100 +169,304 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-07-10T07:37:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+    <h1 class="article-title" itemprop="name">
+      python1
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2021/07/11/python1/" class="archive-article-date">
+  	<time datetime="2021-07-11T06:18:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="python-day1"><a href="#python-day1" class="headerlink" title="python day1"></a>python day1</h1><span id="more"></span>
+
+<h2 id="初识python"><a href="#初识python" class="headerlink" title="初识python"></a>初识python</h2><h3 id="代码中的注释"><a href="#代码中的注释" class="headerlink" title="代码中的注释"></a>代码中的注释</h3><p>单行注释 - 以#和空格开头的部分</p>
+<p>多行注释 - 三个引号开头，三个引号结尾</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">第一个Python程序 - hello, world!</span><br><span class="line">向伟大的Dennis M. Ritchie先生致敬</span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">Date: 2018-02-26</span><br><span class="line">请将该文件命名为hello.py</span><br><span class="line">使用Windows的小伙伴可以在命令行提示下通过下面的命令运行该程序</span><br><span class="line">python hello.py</span><br><span class="line">对于使用Linux或macOS的小伙伴可以打开终端并键入下面的命令来运行程序</span><br><span class="line">python3 hello.py</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">print(&#x27;hello, world!&#x27;)</span><br><span class="line"># print(&quot;你好,世界！&quot;)</span><br><span class="line">print(&#x27;你好&#x27;, &#x27;世界&#x27;)</span><br><span class="line">print(&#x27;hello&#x27;, &#x27;world&#x27;, sep=&#x27;, &#x27;, end=&#x27;!&#x27;)</span><br><span class="line">print(&#x27;goodbye, world&#x27;, end=&#x27;!\n&#x27;)</span><br></pre></td></tr></table></figure>
+<h3 id="学习使用turtle在屏幕上绘制图形"><a href="#学习使用turtle在屏幕上绘制图形" class="headerlink" title="学习使用turtle在屏幕上绘制图形"></a>学习使用turtle在屏幕上绘制图形</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import turtle</span><br><span class="line"></span><br><span class="line">turtle.pensize(4)</span><br><span class="line">turtle.pencolor(&#x27;red&#x27;)</span><br><span class="line"></span><br><span class="line">turtle.forward(100)</span><br><span class="line"># 沿当前朝向移动100像素</span><br><span class="line">turtle.right(90)</span><br><span class="line"># 顺时针旋转90度</span><br><span class="line">turtle.forward(100)</span><br><span class="line">turtle.right(90)</span><br><span class="line">turtle.forward(100)</span><br><span class="line">turtle.right(90)</span><br><span class="line">turtle.forward(100)</span><br><span class="line"></span><br><span class="line">turtle.mainloop()</span><br><span class="line"># 显示绘图窗口</span><br></pre></td></tr></table></figure>
+<h2 id="语言元素"><a href="#语言元素" class="headerlink" title="语言元素"></a>语言元素</h2><h3 id="变量和类型"><a href="#变量和类型" class="headerlink" title="变量和类型"></a>变量和类型</h3><p>整型：Python中可以处理任意大小的整数（Python 2.x中有int和long两种类型的整数，但这种区分对Python来说意义不大，因此在Python 3.x中整数只有int这一种了），而且支持二进制（如0b100，换算成十进制是4）、八进制（如0o100，换算成十进制是64）、十进制（100）和十六进制（0x100，换算成十进制是256）的表示法。</p>
+<p>浮点型：浮点数也就是小数，之所以称为浮点数，是因为按照科学记数法表示时，一个浮点数的小数点位置是可变的，浮点数除了数学写法（如123.456）之外还支持科学计数法（如1.23456e2）。</p>
+<p>字符串型：字符串是以单引号或双引号括起来的任意文本，比如’hello’和”hello”,字符串还有原始字符串表示法、字节字符串表示法、Unicode字符串表示法，而且可以书写成多行的形式（用三个单引号或三个双引号开头，三个单引号或三个双引号结尾）。</p>
+<p>布尔型：布尔值只有True、False两种值，要么是True，要么是False，在Python中，可以直接用True、False表示布尔值（请注意大小写），也可以通过布尔运算计算出来（例如3 &lt; 5会产生布尔值True，而2 == 1会产生布尔值False）。</p>
+<p>复数型：形如3+5j，跟数学上的复数表示一样，唯一不同的是虚部的i换成了j。实际上，这个类型并不常用，大家了解一下就可以了。</p>
+<h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h2><ul>
+<li>硬性规则：</li>
+</ul>
+<ol>
+<li>变量名由字母（广义的Unicode字符，不包括特殊字符）、数字和下划线构成，数字不能开头。</li>
+<li>大小写敏感（大写的a和小写的A是两个不同的变量）。</li>
+<li>不要跟关键字（有特殊含义的单词，后面会讲到）和系统保留字（如函数、模块等的名字）冲突。</li>
+</ol>
+<ul>
+<li>PEP 8要求：</li>
+</ul>
+<ol>
+<li>用小写字母拼写，多个单词用下划线连接。</li>
+<li>受保护的实例属性用单个下划线开头（后面会讲到）。</li>
+<li>私有的实例属性用两个下划线开头（后面会讲到）。<h2 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用变量保存数据并进行加减乘除运算</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = 321</span><br><span class="line">b = 12</span><br><span class="line">print(a + b)    # 333</span><br><span class="line">print(a - b)    # 309</span><br><span class="line">print(a * b)    # 3852</span><br><span class="line">print(a / b)    # 26.75</span><br></pre></td></tr></table></figure>
+在Python中可以使用<code>type</code>函数对变量的类型进行检查。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用type()检查变量的类型</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = 100</span><br><span class="line">b = 12.345</span><br><span class="line">c = 1 + 5j</span><br><span class="line">d = &#x27;hello, world&#x27;</span><br><span class="line">e = True</span><br><span class="line">print(type(a))    # &lt;class &#x27;int&#x27;&gt;</span><br><span class="line">print(type(b))    # &lt;class &#x27;float&#x27;&gt;</span><br><span class="line">print(type(c))    # &lt;class &#x27;complex&#x27;&gt;</span><br><span class="line">print(type(d))    # &lt;class &#x27;str&#x27;&gt;</span><br><span class="line">print(type(e))    # &lt;class &#x27;bool&#x27;&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="可以使用Python中内置的函数对变量类型进行转换。"><a href="#可以使用Python中内置的函数对变量类型进行转换。" class="headerlink" title="可以使用Python中内置的函数对变量类型进行转换。"></a>可以使用Python中内置的函数对变量类型进行转换。</h3></li>
+</ol>
+<ul>
+<li><code>int()</code>：将一个数值或字符串转换成整数，可以指定进制。</li>
+<li><code>float()</code>：将一个字符串转换成浮点数。</li>
+<li><code>str()</code>：将指定的对象转换成字符串形式，可以指定编码。</li>
+<li><code>chr()</code>：将整数转换成该编码对应的字符串（一个字符）。</li>
+<li><code>ord()</code>：将字符串（一个字符）转换成对应的编码（整数）。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用input()函数获取键盘输入(字符串)</span><br><span class="line">使用int()函数将输入的字符串转换成整数</span><br><span class="line">使用print()函数输出带占位符的字符串</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = int(input(&#x27;a = &#x27;))</span><br><span class="line">b = int(input(&#x27;b = &#x27;))</span><br><span class="line">print(&#x27;%d + %d = %d&#x27; % (a, b, a + b))</span><br><span class="line">print(&#x27;%d - %d = %d&#x27; % (a, b, a - b))</span><br><span class="line">print(&#x27;%d * %d = %d&#x27; % (a, b, a * b))</span><br><span class="line">print(&#x27;%d / %d = %f&#x27; % (a, b, a / b))</span><br><span class="line">print(&#x27;%d // %d = %d&#x27; % (a, b, a // b))</span><br><span class="line">print(&#x27;%d %% %d = %d&#x27; % (a, b, a % b))</span><br><span class="line">print(&#x27;%d ** %d = %d&#x27; % (a, b, a ** b))</span><br></pre></td></tr></table></figure></li>
+<li>上面的print函数中输出的字符串使用了占位符语法，其中%d是整数的占位符，%f是小数的占位符，%%表示百分号（因为百分号代表了占位符，所以带占位符的字符串中要表示百分号必须写成%%），字符串之后的%后面跟的变量值会替换掉占位符然后输出到终端中，运行上面的程序，看看程序执行结果就明白啦。*<h3 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h3>Python支持多种运算符，下表大致按照优先级<strong>从高到低</strong>的顺序列出了所有的运算符，运算符的优先级指的是多个运算符同时出现时，先做什么运算然后再做什么运算。除了我们之前已经用过的赋值运算符和算术运算符，我们稍后会陆续讲到其他运算符的使用。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>[] [:]</td>
+<td>下标，切片</td>
+</tr>
+<tr>
+<td>**</td>
+<td>指数</td>
+</tr>
+<tr>
+<td>~ + -</td>
+<td>按位取反, 正负号</td>
+</tr>
+<tr>
+<td></td>
+<td>* / % //</td>
+</tr>
+<tr>
+<td></td>
+<td>+ -</td>
+</tr>
+<tr>
+<td></td>
+<td>&gt;&gt; &lt;&lt;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>按位与</td>
+</tr>
+<tr>
+<td>^</td>
+<td>按位异或，按位或</td>
+</tr>
+<tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>小于等于，小于，大于，大于等于</td>
+</tr>
+<tr>
+<td>== !=</td>
+<td>等于，不等于</td>
+</tr>
+<tr>
+<td>is is not</td>
+<td>身份运算符</td>
+</tr>
+<tr>
+<td>in not in</td>
+<td>成员运算符</td>
+</tr>
+<tr>
+<td>not or and</td>
+<td>逻辑运算符</td>
+</tr>
+<tr>
+<td>= += -= *= /= %= //= **= &amp;=</td>
+<td><code>    = ^= &gt;&gt;= &lt;&lt;=</code></td>
+</tr>
+<tr>
+<td><em>在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。</em></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>赋值运算符应该是最为常见的运算符，它的作用是将右边的值赋给左边的变量。下面的例子演示了赋值运算符和复合赋值运算符的使用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">赋值运算符和复合赋值运算符</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = 10</span><br><span class="line">b = 3</span><br><span class="line">a += b        # 相当于：a = a + b</span><br><span class="line">a *= a + 2    # 相当于：a = a * (a + 2)</span><br><span class="line">print(a)      # 算一下这里会输出什么</span><br></pre></td></tr></table></figure>
+<h3 id="比较运算符和逻辑运算符"><a href="#比较运算符和逻辑运算符" class="headerlink" title="比较运算符和逻辑运算符"></a>比较运算符和逻辑运算符</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">比较运算符和逻辑运算符的使用</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">flag0 = 1 == 1</span><br><span class="line">flag1 = 3 &gt; 2</span><br><span class="line">flag2 = 2 &lt; 1</span><br><span class="line">flag3 = flag1 and flag2</span><br><span class="line">flag4 = flag1 or flag2</span><br><span class="line">flag5 = not (1 != 2)</span><br><span class="line">print(&#x27;flag0 =&#x27;, flag0)    # flag0 = True</span><br><span class="line">print(&#x27;flag1 =&#x27;, flag1)    # flag1 = True</span><br><span class="line">print(&#x27;flag2 =&#x27;, flag2)    # flag2 = False</span><br><span class="line">print(&#x27;flag3 =&#x27;, flag3)    # flag3 = False</span><br><span class="line">print(&#x27;flag4 =&#x27;, flag4)    # flag4 = True</span><br><span class="line">print(&#x27;flag5 =&#x27;, flag5)    # flag5 = False</span><br></pre></td></tr></table></figure>
+<p><em>比较运算符的优先级高于赋值运算符，所以<code>flag0 = 1 == 1</code>先做<code>1 == 1</code>产生布尔值<code>True</code>，再将这个值赋值给变量<code>flag0</code>。<code>print</code>函数可以输出多个值，多个值之间可以用,进行分隔，输出的内容之间默认以空格分开。</em></p>
+<h4 id="练习：输入年份判断是不是闰年"><a href="#练习：输入年份判断是不是闰年" class="headerlink" title="练习：输入年份判断是不是闰年"></a>练习：输入年份判断是不是闰年</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入年份 如果是闰年输出True 否则输出False</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">year = int(input(&#x27;请输入年份: &#x27;))</span><br><span class="line"># 如果代码太长写成一行不便于阅读 可以使用\对代码进行折行</span><br><span class="line">is_leap = year % 4 == 0 and year % 100 != 0 or \</span><br><span class="line">          year % 400 == 0</span><br><span class="line">print(is_leap)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/zhifubao.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/wechatm.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://lacie123.github.io/021/07/11/python1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/07/10/hello-world/" class="archive-article-date">
-  	<time datetime="2021-07-10T05:34:14.593Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/07/10/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">我的第一篇博客文章</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/07/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-day1"><span class="toc-number">1.</span> <span class="toc-text">python day1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E8%AF%86python"><span class="toc-number">1.1.</span> <span class="toc-text">初识python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="toc-number">1.1.1.</span> <span class="toc-text">代码中的注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8turtle%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%BB%98%E5%88%B6%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.1.2.</span> <span class="toc-text">学习使用turtle在屏幕上绘制图形</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.</span> <span class="toc-text">语言元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">变量和类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-number">1.3.</span> <span class="toc-text">变量命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">变量的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8Python%E4%B8%AD%E5%86%85%E7%BD%AE%E7%9A%84%E5%87%BD%E6%95%B0%E5%AF%B9%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2%E3%80%82"><span class="toc-number">1.4.1.</span> <span class="toc-text">可以使用Python中内置的函数对变量类型进行转换。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.2.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.3.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.4.</span> <span class="toc-text">比较运算符和逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A%E8%BE%93%E5%85%A5%E5%B9%B4%E4%BB%BD%E5%88%A4%E6%96%AD%E6%98%AF%E4%B8%8D%E6%98%AF%E9%97%B0%E5%B9%B4"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">练习：输入年份判断是不是闰年</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
+        
+    </div>
+</aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+
+
+  
           </div>
         </div>
       </div>
@@ -278,9 +487,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
