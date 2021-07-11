@@ -16,7 +16,7 @@
 <meta property="og:description" content="python day1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-07-11T06:18:03.000Z">
-<meta property="article:modified_time" content="2021-07-11T07:50:51.484Z">
+<meta property="article:modified_time" content="2021-07-11T08:10:12.665Z">
 <meta property="article:author" content="lacie123">
 <meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
@@ -200,7 +200,7 @@
 <p>字符串型：字符串是以单引号或双引号括起来的任意文本，比如’hello’和”hello”,字符串还有原始字符串表示法、字节字符串表示法、Unicode字符串表示法，而且可以书写成多行的形式（用三个单引号或三个双引号开头，三个单引号或三个双引号结尾）。</p>
 <p>布尔型：布尔值只有True、False两种值，要么是True，要么是False，在Python中，可以直接用True、False表示布尔值（请注意大小写），也可以通过布尔运算计算出来（例如3 &lt; 5会产生布尔值True，而2 == 1会产生布尔值False）。</p>
 <p>复数型：形如3+5j，跟数学上的复数表示一样，唯一不同的是虚部的i换成了j。实际上，这个类型并不常用，大家了解一下就可以了。</p>
-<h2 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h2><ul>
+<h3 id="变量命名"><a href="#变量命名" class="headerlink" title="变量命名"></a>变量命名</h3><ul>
 <li>硬性规则：</li>
 </ul>
 <ol>
@@ -214,7 +214,7 @@
 <ol>
 <li>用小写字母拼写，多个单词用下划线连接。</li>
 <li>受保护的实例属性用单个下划线开头（后面会讲到）。</li>
-<li>私有的实例属性用两个下划线开头（后面会讲到）。<h2 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用变量保存数据并进行加减乘除运算</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = 321</span><br><span class="line">b = 12</span><br><span class="line">print(a + b)    # 333</span><br><span class="line">print(a - b)    # 309</span><br><span class="line">print(a * b)    # 3852</span><br><span class="line">print(a / b)    # 26.75</span><br></pre></td></tr></table></figure>
+<li>私有的实例属性用两个下划线开头（后面会讲到）。<h3 id="变量的使用"><a href="#变量的使用" class="headerlink" title="变量的使用"></a>变量的使用</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用变量保存数据并进行加减乘除运算</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = 321</span><br><span class="line">b = 12</span><br><span class="line">print(a + b)    # 333</span><br><span class="line">print(a - b)    # 309</span><br><span class="line">print(a * b)    # 3852</span><br><span class="line">print(a / b)    # 26.75</span><br></pre></td></tr></table></figure>
 在Python中可以使用<code>type</code>函数对变量的类型进行检查。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">使用type()检查变量的类型</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = 100</span><br><span class="line">b = 12.345</span><br><span class="line">c = 1 + 5j</span><br><span class="line">d = &#x27;hello, world&#x27;</span><br><span class="line">e = True</span><br><span class="line">print(type(a))    # &lt;class &#x27;int&#x27;&gt;</span><br><span class="line">print(type(b))    # &lt;class &#x27;float&#x27;&gt;</span><br><span class="line">print(type(c))    # &lt;class &#x27;complex&#x27;&gt;</span><br><span class="line">print(type(d))    # &lt;class &#x27;str&#x27;&gt;</span><br><span class="line">print(type(e))    # &lt;class &#x27;bool&#x27;&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="可以使用Python中内置的函数对变量类型进行转换。"><a href="#可以使用Python中内置的函数对变量类型进行转换。" class="headerlink" title="可以使用Python中内置的函数对变量类型进行转换。"></a>可以使用Python中内置的函数对变量类型进行转换。</h3></li>
 </ol>
@@ -229,69 +229,69 @@
 <table>
 <thead>
 <tr>
-<th>运算符</th>
-<th>描述</th>
+<th align="center">运算符</th>
+<th align="center">描述</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>[] [:]</td>
-<td>下标，切片</td>
+<td align="center">[] [:]</td>
+<td align="center">下标，切片</td>
 </tr>
 <tr>
-<td>**</td>
-<td>指数</td>
+<td align="center">**</td>
+<td align="center">指数</td>
 </tr>
 <tr>
-<td>~ + -</td>
-<td>按位取反, 正负号</td>
+<td align="center">~ + -</td>
+<td align="center">按位取反, 正负号</td>
 </tr>
 <tr>
-<td></td>
-<td>* / % //</td>
+<td align="center">* / % //</td>
+<td align="center">乘，除，模，整除</td>
 </tr>
 <tr>
-<td></td>
-<td>+ -</td>
+<td align="center">+ -</td>
+<td align="center">加，减</td>
 </tr>
 <tr>
-<td></td>
-<td>&gt;&gt; &lt;&lt;</td>
+<td align="center">&gt;&gt; &lt;&lt;</td>
+<td align="center">右移，左移</td>
 </tr>
 <tr>
-<td>&amp;</td>
-<td>按位与</td>
+<td align="center">&amp;</td>
+<td align="center">按位与</td>
 </tr>
 <tr>
-<td>^</td>
-<td>按位异或，按位或</td>
+<td align="center">^</td>
+<td align="center">按位异或，按位或</td>
 </tr>
 <tr>
-<td>&lt;= &lt; &gt; &gt;=</td>
-<td>小于等于，小于，大于，大于等于</td>
+<td align="center">&lt;= &lt; &gt; &gt;=</td>
+<td align="center">小于等于，小于，大于，大于等于</td>
 </tr>
 <tr>
-<td>== !=</td>
-<td>等于，不等于</td>
+<td align="center">== !=</td>
+<td align="center">等于，不等于</td>
 </tr>
 <tr>
-<td>is is not</td>
-<td>身份运算符</td>
+<td align="center">is is not</td>
+<td align="center">身份运算符</td>
 </tr>
 <tr>
-<td>in not in</td>
-<td>成员运算符</td>
+<td align="center">in not in</td>
+<td align="center">成员运算符</td>
 </tr>
 <tr>
-<td>not or and</td>
-<td>逻辑运算符</td>
+<td align="center">not or and</td>
+<td align="center">逻辑运算符</td>
 </tr>
 <tr>
-<td>= += -= *= /= %= //= **= &amp;=</td>
-<td><code>    = ^= &gt;&gt;= &lt;&lt;=</code></td>
+<td align="center">= += -= *= /= %= //= **= &amp;=</td>
+<td align="center"><code>    = ^= &gt;&gt;= &lt;&lt;=</code></td>
 </tr>
 <tr>
-<td><em>在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。</em></td>
-<td></td>
+<td align="center"><em>在实际开发中，如果搞不清楚运算符的优先级，可以使用括号来确保运算的执行顺序。</em></td>
+<td align="center"></td>
 </tr>
 </tbody></table>
 <h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><p>赋值运算符应该是最为常见的运算符，它的作用是将右边的值赋给左边的变量。下面的例子演示了赋值运算符和复合赋值运算符的使用。</p>
@@ -443,7 +443,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-day1"><span class="toc-number">1.</span> <span class="toc-text">python day1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E8%AF%86python"><span class="toc-number">1.1.</span> <span class="toc-text">初识python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="toc-number">1.1.1.</span> <span class="toc-text">代码中的注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8turtle%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%BB%98%E5%88%B6%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.1.2.</span> <span class="toc-text">学习使用turtle在屏幕上绘制图形</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.</span> <span class="toc-text">语言元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">变量和类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-number">1.3.</span> <span class="toc-text">变量命名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.4.</span> <span class="toc-text">变量的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8Python%E4%B8%AD%E5%86%85%E7%BD%AE%E7%9A%84%E5%87%BD%E6%95%B0%E5%AF%B9%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2%E3%80%82"><span class="toc-number">1.4.1.</span> <span class="toc-text">可以使用Python中内置的函数对变量类型进行转换。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.2.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.3.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.4.4.</span> <span class="toc-text">比较运算符和逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A%E8%BE%93%E5%85%A5%E5%B9%B4%E4%BB%BD%E5%88%A4%E6%96%AD%E6%98%AF%E4%B8%8D%E6%98%AF%E9%97%B0%E5%B9%B4"><span class="toc-number">1.4.4.1.</span> <span class="toc-text">练习：输入年份判断是不是闰年</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python-day1"><span class="toc-number">1.</span> <span class="toc-text">python day1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E8%AF%86python"><span class="toc-number">1.1.</span> <span class="toc-text">初识python</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="toc-number">1.1.1.</span> <span class="toc-text">代码中的注释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E4%BD%BF%E7%94%A8turtle%E5%9C%A8%E5%B1%8F%E5%B9%95%E4%B8%8A%E7%BB%98%E5%88%B6%E5%9B%BE%E5%BD%A2"><span class="toc-number">1.1.2.</span> <span class="toc-text">学习使用turtle在屏幕上绘制图形</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0"><span class="toc-number">1.2.</span> <span class="toc-text">语言元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%92%8C%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.</span> <span class="toc-text">变量和类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%91%BD%E5%90%8D"><span class="toc-number">1.2.2.</span> <span class="toc-text">变量命名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="toc-number">1.2.3.</span> <span class="toc-text">变量的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%AF%E4%BB%A5%E4%BD%BF%E7%94%A8Python%E4%B8%AD%E5%86%85%E7%BD%AE%E7%9A%84%E5%87%BD%E6%95%B0%E5%AF%B9%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B%E8%BF%9B%E8%A1%8C%E8%BD%AC%E6%8D%A2%E3%80%82"><span class="toc-number">1.2.4.</span> <span class="toc-text">可以使用Python中内置的函数对变量类型进行转换。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.5.</span> <span class="toc-text">运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B5%8B%E5%80%BC%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.6.</span> <span class="toc-text">赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.7.</span> <span class="toc-text">比较运算符和逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BB%83%E4%B9%A0%EF%BC%9A%E8%BE%93%E5%85%A5%E5%B9%B4%E4%BB%BD%E5%88%A4%E6%96%AD%E6%98%AF%E4%B8%8D%E6%98%AF%E9%97%B0%E5%B9%B4"><span class="toc-number">1.2.7.1.</span> <span class="toc-text">练习：输入年份判断是不是闰年</span></a></li></ol></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
