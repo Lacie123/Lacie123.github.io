@@ -166,6 +166,120 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/16/python2/">python2</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/16/python2/" class="archive-article-date">
+  	<time datetime="2021-07-16T11:14:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <span id="more"></span>
+<h1 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h1><h2 id="if语句的使用"><a href="#if语句的使用" class="headerlink" title="if语句的使用"></a>if语句的使用</h2><p>在Python中，要构造分支结构可以使用<code>if</code>、<code>elif</code>和<code>else</code>关键字。下面的例子中演示了如何构造一个分支结构。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">用户身份验证</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">username = input(&#x27;请输入用户名: &#x27;)</span><br><span class="line">password = input(&#x27;请输入口令: &#x27;)</span><br><span class="line"># 用户名是admin且密码是123456则身份验证成功否则身份验证失败</span><br><span class="line">if username == &#x27;admin&#x27; and password == &#x27;123456&#x27;:</span><br><span class="line">    print(&#x27;身份验证成功!&#x27;)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;身份验证失败!&#x27;)</span><br></pre></td></tr></table></figure>
+
+<p>Python中没有用花括号来构造代码块而是使用了缩进的方式来表示代码的层次结构，如果<code>if</code>条件成立的情况下需要执行多条语句，只要保持多条语句具有相同的缩进就可以了。换句话说连续的代码如果又保持了相同的缩进那么它们属于同一个代码块，相当于是一个执行的整体。缩进可以使用任意数量的空格，但通常使用<strong>4个空格</strong>，建议大家不要使用制表键或者设置你的代码编辑工具自动将制表键变成<strong>4个空格</strong>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">分段函数求值</span><br><span class="line"></span><br><span class="line">        3x - 5  (x &gt; 1)</span><br><span class="line">f(x) =  x + 2   (-1 &lt;= x &lt;= 1)</span><br><span class="line">        5x + 3  (x &lt; -1)</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">x = float(input(&#x27;x = &#x27;))</span><br><span class="line">if x &gt; 1:</span><br><span class="line">    y = 3 * x - 5</span><br><span class="line">elif x &gt;= -1:</span><br><span class="line">    y = x + 2</span><br><span class="line">else:</span><br><span class="line">    y = 5 * x + 3</span><br><span class="line">print(&#x27;f(%.2f) = %.2f&#x27; % (x, y))</span><br></pre></td></tr></table></figure>
+
+<p>当然根据实际开发的需要，分支结构是可以嵌套的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">分段函数求值</span><br><span class="line">		3x - 5	(x &gt; 1)</span><br><span class="line">f(x) =	x + 2	(-1 &lt;= x &lt;= 1)</span><br><span class="line">		5x + 3	(x &lt; -1)</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">x = float(input(&#x27;x = &#x27;))</span><br><span class="line">if x &gt; 1:</span><br><span class="line">    y = 3 * x - 5</span><br><span class="line">else:</span><br><span class="line">    if x &gt;= -1:</span><br><span class="line">        y = x + 2</span><br><span class="line">    else:</span><br><span class="line">        y = 5 * x + 3</span><br><span class="line">print(&#x27;f(%.2f) = %.2f&#x27; % (x, y))</span><br></pre></td></tr></table></figure>
+<p>练习：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">判断输入的边长能否构成三角形，如果能则计算出三角形的周长和面积</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">a = float(input(&#x27;a = &#x27;))</span><br><span class="line">b = float(input(&#x27;b = &#x27;))</span><br><span class="line">c = float(input(&#x27;c = &#x27;))</span><br><span class="line">if a + b &gt; c and a + c &gt; b and b + c &gt; a:</span><br><span class="line">    print(&#x27;周长: %f&#x27; % (a + b + c))</span><br><span class="line">    p = (a + b + c) / 2</span><br><span class="line">    area = (p * (p - a) * (p - b) * (p - c)) ** 0.5</span><br><span class="line">    print(&#x27;面积: %f&#x27; % (area))</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;不能构成三角形&#x27;)</span><br></pre></td></tr></table></figure>
+
+<h1 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h1><h2 id="for-in循环"><a href="#for-in循环" class="headerlink" title="for-in循环"></a>for-in循环</h2><p>如果明确的知道循环执行的次数或者要对一个容器进行迭代（后面会讲到），那么我们推荐使用for-in循环，例如下面代码中计算1~100求和的结果（$\displaystyle \sum \limits_{n=1}^{100}n$）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">用for循环实现1~100求和</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">sum = 0</span><br><span class="line">for x in range(101):</span><br><span class="line">    sum += x</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>range(101)：可以用来产生0到100范围的整数，需要注意的是取不到101。</li>
+<li>range(1, 101)：可以用来产生1到100范围的整数，相当于前面是闭区间后面是开区间。</li>
+<li>range(1, 101, 2)：可以用来产生1到100的奇数，其中2是步长，即每次数值递增的值。</li>
+<li>range(100, 0, -2)：可以用来产生100到1的偶数，其中-2是步长，即每次数字递减的值。</li>
+</ul>
+<p>1<del>100之间的偶数求和<br>“””<br>用for循环实现1</del>100之间的偶数求和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">sum = 0</span><br><span class="line">for x in range(2, 101, 2):</span><br><span class="line">    sum += x</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<p>也可以通过在循环中使用分支结构的方式来实现相同的功能，代码如下所示。<br>“””<br>用for循环实现1~100之间的偶数求和</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">sum = 0</span><br><span class="line">for x in range(1, 101):</span><br><span class="line">    if x % 2 == 0:</span><br><span class="line">        sum += x</span><br><span class="line">print(sum)</span><br></pre></td></tr></table></figure>
+<h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h2><p>如果要构造不知道具体循环次数的循环结构，我们推荐使用<code>while</code>循环。<code>while</code>循环通过一个能够产生或转换出<code>bool</code>值的表达式来控制循环，表达式的值为<code>True</code>则继续循环；表达式的值为<code>False</code>则结束循环。</p>
+<p>下面我们通过一个“猜数字”的小游戏来看看如何使用<code>while</code>循环。猜数字游戏的规则是：计算机出一个1到100之间的随机数，玩家输入自己猜的数字，计算机给出对应的提示信息（大一点、小一点或猜对了），如果玩家猜中了数字，计算机提示用户一共猜了多少次，游戏结束，否则游戏继续。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">猜数字游戏</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">import random</span><br><span class="line"></span><br><span class="line">answer = random.randint(1, 100)</span><br><span class="line">counter = 0</span><br><span class="line">while True:</span><br><span class="line">    counter += 1</span><br><span class="line">    number = int(input(&#x27;请输入: &#x27;))</span><br><span class="line">    if number &lt; answer:</span><br><span class="line">        print(&#x27;大一点&#x27;)</span><br><span class="line">    elif number &gt; answer:</span><br><span class="line">        print(&#x27;小一点&#x27;)</span><br><span class="line">    else:</span><br><span class="line">        print(&#x27;恭喜你猜对了!&#x27;)</span><br><span class="line">        break</span><br><span class="line">print(&#x27;你总共猜了%d次&#x27; % counter)</span><br><span class="line">if counter &gt; 7:</span><br><span class="line">    print(&#x27;你的智商余额明显不足&#x27;)</span><br></pre></td></tr></table></figure>
+<p><em>上面的代码中使用了break关键字来提前终止循环，需要注意的是break只能终止它所在的那个循环，这一点在使用嵌套的循环结构（下面会讲到）需要引起注意。除了break之外，还有另一个关键字是continue，它可以用来放弃本次循环后续的代码直接让循环进入下一轮。</em></p>
+<p>和分支结构一样，循环结构也是可以嵌套的，也就是说在循环中还可以构造循环结构。下面的例子演示了如何通过嵌套的循环来输出一个九九乘法表。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">输出乘法口诀表(九九表)</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line"></span><br><span class="line">for i in range(1, 10):</span><br><span class="line">    for j in range(1, i + 1):</span><br><span class="line">        print(&#x27;%d*%d=%d&#x27; % (i, j, i * j), end=&#x27;\t&#x27;)</span><br><span class="line">    print()</span><br></pre></td></tr></table></figure>
+
+<p>练习1：输入一个正整数判断是不是素数。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&quot;&quot;&quot;</span><br><span class="line">输入一个正整数判断它是不是素数</span><br><span class="line"></span><br><span class="line">Version: 0.1</span><br><span class="line">Author: 骆昊</span><br><span class="line">Date: 2018-03-01</span><br><span class="line">&quot;&quot;&quot;</span><br><span class="line">from math import sqrt</span><br><span class="line"></span><br><span class="line">num = int(input(&#x27;请输入一个正整数: &#x27;))</span><br><span class="line">end = int(sqrt(num))</span><br><span class="line">is_prime = True</span><br><span class="line">for x in range(2, end + 1):</span><br><span class="line">    if num % x == 0:</span><br><span class="line">        is_prime = False</span><br><span class="line">        break</span><br><span class="line">if is_prime and num != 1:</span><br><span class="line">    print(&#x27;%d是素数&#x27; % num)</span><br><span class="line">else:</span><br><span class="line">    print(&#x27;%d不是素数&#x27; % num)</span><br></pre></td></tr></table></figure>
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/16/python2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+          
+
+<!-- 目录内容 -->
+
+<!-- 目录内容结束 -->
+  
     <article id="post-卷积神经网络原理CNN" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
